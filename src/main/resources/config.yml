@@ -1,0 +1,37 @@
+# ElytraRemover Configuration File
+
+# Check interval in seconds (how often to scan for elytras in item frames in End ships)
+check-interval: 10
+
+# Debug mode (enables additional logging)
+debug: true
+
+# End ship detection settings
+end-ship:
+  # Minimum Y level for end ships (used for detection)
+  min-y: 0
+  
+  # Maximum Y level for end ships (used for detection)
+  max-y: 256
+  
+  # Whether to check for elytras in all item frames in The End (not just in ships with boats)
+  remove-all-end-elytras: true
+  
+  # How aggressively to scan chunks (higher = more thorough but more resource intensive)
+  # 0 = basic, 1 = normal, 2 = aggressive
+  scan-intensity: 3
+  
+  # Action to take when finding an elytra in an item frame
+  # Options: REMOVE_ELYTRA, REMOVE_FRAME, REPLACE_WITH_APPLE
+  action: REPLACE_WITH_APPLE
+
+# Messages
+messages:
+  # Message logged when an elytra is removed from an item frame
+  removed: "Removed an elytra from an item frame at location: {location}"
+  
+  # Message logged when a player tries to place an elytra in an item frame in The End
+  prevented: "Prevented {player} from placing an elytra in an item frame in The End"
+  
+  # Message shown to players when they try to place an elytra in The End
+  player-notify: "§cElytras cannot be placed in item frames in The End."

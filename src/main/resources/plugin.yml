@@ -1,0 +1,14 @@
+name: ElytraRemover
+version: '1.0'
+main: com.example.minecraftplugin.ElytraRemoverPlugin
+api-version: '1.20'
+description: Removes elytras from end ships by replacing them with apples or removing item frames
+author: Zaoldieck
+commands:
+  elytraremover:
+    description: Plugin commands
+    usage: /elytraremover [reload|scan]
+    permission: elytraremover.admin
+permissions:
+  elytraremover.admin:
+    default: op
